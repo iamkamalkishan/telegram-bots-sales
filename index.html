@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Telegram Bots for Business - Automated Solutions</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; }
+        .hero { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 100px 20px; text-align: center; }
+        .hero h1 { font-size: 2.5rem; margin-bottom: 20px; }
+        .hero p { font-size: 1.2rem; margin-bottom: 30px; opacity: 0.9; }
+        .btn { background: #fff; color: #667eea; padding: 15px 40px; border: none; border-radius: 30px; font-size: 1.1rem; cursor: pointer; transition: transform 0.3s; }
+        .btn:hover { transform: scale(1.05); }
+        .container { max-width: 1200px; margin: 0 auto; padding: 60px 20px; }
+        .section-title { text-align: center; font-size: 2rem; margin-bottom: 40px; color: #333; }
+        .bots-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+        .bot-card { background: white; border-radius: 15px; padding: 30px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); transition: transform 0.3s; }
+        .bot-card:hover { transform: translateY(-10px); }
+        .bot-icon { font-size: 3rem; margin-bottom: 20px; }
+        .bot-card h3 { font-size: 1.5rem; margin-bottom: 15px; color: #333; }
+        .bot-card p { color: #666; margin-bottom: 20px; }
+        .features { list-style: none; margin-bottom: 20px; }
+        .features li { padding: 8px 0; color: #555; }
+        .features li::before { content: "✓"; color: #667eea; font-weight: bold; margin-right: 10px; }
+        .price { font-size: 2rem; color: #667eea; font-weight: bold; margin-bottom: 20px; }
+        .price span { font-size: 1rem; color: #999; }
+        .cta-btn { display: block; width: 100%; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 15px; border: none; border-radius: 10px; font-size: 1.1rem; cursor: pointer; transition: opacity 0.3s; }
+        .cta-btn:hover { opacity: 0.9; }
+        .testimonials { background: #f8f9fa; padding: 60px 20px; }
+        .testimonial-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+        .testimonial { background: white; padding: 30px; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
+        .testimonial p { font-style: italic; color: #555; margin-bottom: 20px; }
+        .testimonial-author { font-weight: bold; color: #333; }
+        .cta-section { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 80px 20px; text-align: center; }
+        .cta-section h2 { font-size: 2rem; margin-bottom: 20px; }
+        .cta-section p { margin-bottom: 30px; opacity: 0.9; }
+        footer { background: #333; color: white; text-align: center; padding: 30px 20px; }
+    </style>
+</head>
+<body>
+    <section class="hero">
+        <h1>🤖 Telegram Bots for Your Business</h1>
+        <p>Automate bookings, orders, and customer service with AI-powered Telegram bots</p>
+        <button class="btn" onclick="document.getElementById('bots').scrollIntoView()">View Our Bots</button>
+    </section>
+
+    <section class="container" id="bots">
+        <h2 class="section-title">Choose Your Bot</h2>
+        <div class="bots-grid">
+            <div class="bot-card">
+                <div class="bot-icon">💇‍♂️</div>
+                <h3>Salon Booking Bot</h3>
+                <p>Automate appointment bookings for your salon or spa</p>
+                <ul class="features">
+                    <li>Customer self-service booking</li>
+                    <li>Service & price management</li>
+                    <li>Automatic reminders</li>
+                    <li>Owner dashboard</li>
+                </ul>
+                <div class="price">₹999<span>/month</span></div>
+                <button class="cta-btn" onclick="window.open('https://t.me/YourSupportBot')">Get Started</button>
+            </div>
+
+            <div class="bot-card">
+                <div class="bot-icon">🛒</div>
+                <h3>Shop Order Bot</h3>
+                <p>Manage orders for your local shop or store</p>
+                <ul class="features">
+                    <li>Product catalog</li>
+                    <li>Cart & checkout</li>
+                    <li>Order management</li>
+                    <li>Delivery tracking</li>
+                </ul>
+                <div class="price">₹799<span>/month</span></div>
+                <button class="cta-btn" onclick="window.open('https://t.me/YourSupportBot')">Get Started</button>
+            </div>
+
+            <div class="bot-card">
+                <div class="bot-icon">🍽️</div>
+                <h3>Restaurant Bot</h3>
+                <p>Accept food orders via Telegram</p>
+                <ul class="features">
+                    <li>Menu browsing</li>
+                    <li>Delivery & pickup</li>
+                    <li>Order status updates</li>
+                    <li>Real-time notifications</li>
+                </ul>
+                <div class="price">₹999<span>/month</span></div>
+                <button class="cta-btn" onclick="window.open('https://t.me/YourSupportBot')">Get Started</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonials">
+        <div class="container">
+            <h2 class="section-title">Why Choose Us?</h2>
+            <div class="testimonial-grid">
+                <div class="testimonial">
+                    <p>"Setup was instant! Our customers love booking through Telegram. Saved us hours of phone calls."</p>
+                    <div class="testimonial-author">- Salon Owner, Mumbai</div>
+                </div>
+                <div class="testimonial">
+                    <p>"Orders increased 40% after we started using the bot. Customers find it so easy to order!"</p>
+                    <div class="testimonial-author">- Shop Owner, Delhi</div>
+                </div>
+                <div class="testimonial">
+                    <p>"Best investment for our restaurant. No more missed orders, everything automated!"</div>
+                    <div class="testimonial-author">- Restaurant Owner, Bangalore</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <h2>Ready to Automate Your Business?</h2>
+        <p>Get started in 5 minutes. No technical skills needed.</p>
+        <button class="btn" onclick="window.open('https://t.me/YourSupportBot')">Contact Us Now</button>
+    </section>
+
+    <footer>
+        <p>© 2026 Telegram Bots for Business. All rights reserved.</p>
+    </footer>
+</body>
+</html>
