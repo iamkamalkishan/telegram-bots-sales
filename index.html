@@ -3,125 +3,182 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Telegram Bots for Business - Automated Solutions</title>
+    <title>AI Agents Hub - Telegram Bots for Business</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; }
         .hero { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 100px 20px; text-align: center; }
-        .hero h1 { font-size: 2.5rem; margin-bottom: 20px; }
-        .hero p { font-size: 1.2rem; margin-bottom: 30px; opacity: 0.9; }
-        .btn { background: #fff; color: #667eea; padding: 15px 40px; border: none; border-radius: 30px; font-size: 1.1rem; cursor: pointer; transition: transform 0.3s; }
-        .btn:hover { transform: scale(1.05); }
-        .container { max-width: 1200px; margin: 0 auto; padding: 60px 20px; }
-        .section-title { text-align: center; font-size: 2rem; margin-bottom: 40px; color: #333; }
-        .bots-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
-        .bot-card { background: white; border-radius: 15px; padding: 30px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); transition: transform 0.3s; }
-        .bot-card:hover { transform: translateY(-10px); }
-        .bot-icon { font-size: 3rem; margin-bottom: 20px; }
-        .bot-card h3 { font-size: 1.5rem; margin-bottom: 15px; color: #333; }
-        .bot-card p { color: #666; margin-bottom: 20px; }
-        .features { list-style: none; margin-bottom: 20px; }
-        .features li { padding: 8px 0; color: #555; }
-        .features li::before { content: "✓"; color: #667eea; font-weight: bold; margin-right: 10px; }
-        .price { font-size: 2rem; color: #667eea; font-weight: bold; margin-bottom: 20px; }
-        .price span { font-size: 1rem; color: #999; }
-        .cta-btn { display: block; width: 100%; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 15px; border: none; border-radius: 10px; font-size: 1.1rem; cursor: pointer; transition: opacity 0.3s; }
-        .cta-btn:hover { opacity: 0.9; }
-        .testimonials { background: #f8f9fa; padding: 60px 20px; }
-        .testimonial-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
-        .testimonial { background: white; padding: 30px; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
-        .testimonial p { font-style: italic; color: #555; margin-bottom: 20px; }
-        .testimonial-author { font-weight: bold; color: #333; }
+        .hero h1 { font-size: 2.5em; margin-bottom: 20px; }
+        .hero p { font-size: 1.2em; margin-bottom: 30px; opacity: 0.9; }
+        .cta-btn { background: white; color: #667eea; padding: 15px 40px; border: none; border-radius: 30px; font-size: 1.1em; cursor: pointer; transition: transform 0.3s; }
+        .cta-btn:hover { transform: scale(1.05); }
+        .bots { padding: 80px 20px; max-width: 1200px; margin: 0 auto; }
+        .bots h2 { text-align: center; font-size: 2em; margin-bottom: 50px; color: #333; }
+        .bot-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; }
+        .bot-card { background: white; border-radius: 15px; padding: 30px; box-shadow: 0 5px 20px rgba(0,0,0,0.1); transition: transform 0.3s; }
+        .bot-card:hover { transform: translateY(-5px); }
+        .bot-card .emoji { font-size: 3em; margin-bottom: 15px; }
+        .bot-card h3 { font-size: 1.4em; margin-bottom: 10px; color: #333; }
+        .bot-card p { color: #666; margin-bottom: 15px; }
+        .bot-card ul { list-style: none; margin-bottom: 20px; }
+        .bot-card li { padding: 5px 0; color: #555; }
+        .bot-card li:before { content: "✅ "; }
+        .price { font-size: 1.5em; font-weight: bold; color: #667eea; margin-bottom: 15px; }
+        .cta-btn { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 12px 30px; border: none; border-radius: 25px; cursor: pointer; font-size: 1em; }
+        .why { background: #f8f9fa; padding: 80px 20px; }
+        .why h2 { text-align: center; font-size: 2em; margin-bottom: 50px; }
+        .why-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; max-width: 1000px; margin: 0 auto; }
+        .why-card { text-align: center; padding: 30px; }
+        .why-card .emoji { font-size: 2.5em; margin-bottom: 15px; }
+        .why-card h3 { margin-bottom: 10px; }
         .cta-section { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 80px 20px; text-align: center; }
-        .cta-section h2 { font-size: 2rem; margin-bottom: 20px; }
+        .cta-section h2 { font-size: 2em; margin-bottom: 20px; }
         .cta-section p { margin-bottom: 30px; opacity: 0.9; }
+        .btn { display: inline-block; background: white; color: #667eea; padding: 15px 40px; border-radius: 30px; text-decoration: none; font-size: 1.1em; font-weight: bold; transition: transform 0.3s; }
+        .btn:hover { transform: scale(1.05); }
         footer { background: #333; color: white; text-align: center; padding: 30px 20px; }
+        footer a { color: #667eea; text-decoration: none; }
+        .badge { display: inline-block; background: #28a745; color: white; padding: 3px 10px; border-radius: 15px; font-size: 0.8em; margin-bottom: 10px; }
     </style>
 </head>
 <body>
     <section class="hero">
-        <h1>🤖 Telegram Bots for Your Business</h1>
-        <p>Automate bookings, orders, and customer service with AI-powered Telegram bots</p>
-        <button class="btn" onclick="document.getElementById('bots').scrollIntoView()">View Our Bots</button>
+        <h1>🤖 AI Agents for Your Business</h1>
+        <p>6 powerful AI bots to automate sales, support, marketing & more</p>
+        <button class="cta-btn" onclick="document.getElementById('bots').scrollIntoView()">Explore Bots</button>
     </section>
 
-    <section class="container" id="bots">
-        <h2 class="section-title">Choose Your Bot</h2>
-        <div class="bots-grid">
+    <section class="bots" id="bots">
+        <h2>Choose Your AI Agent</h2>
+        <div class="bot-grid">
             <div class="bot-card">
-                <div class="bot-icon">💇‍♂️</div>
-                <h3>Salon Booking Bot</h3>
-                <p>Automate appointment bookings for your salon or spa</p>
-                <ul class="features">
-                    <li>Customer self-service booking</li>
-                    <li>Service & price management</li>
-                    <li>Automatic reminders</li>
-                    <li>Owner dashboard</li>
+                <div class="emoji">💬</div>
+                <span class="badge">Most Popular</span>
+                <h3>Customer Support Bot</h3>
+                <p>24/7 auto-reply, FAQ, ticket system & order tracking</p>
+                <ul>
+                    <li>Instant auto-replies</li>
+                    <li>FAQ database (22+ Q&As)</li>
+                    <li>Ticket management</li>
+                    <li>Order tracking</li>
+                    <li>EN/HI support</li>
                 </ul>
-                <div class="price">₹999<span>/month</span></div>
+                <div class="price">₹1,999</div>
                 <button class="cta-btn" onclick="window.open('https://t.me/aiagents_support_bot')">Get Started</button>
             </div>
 
             <div class="bot-card">
-                <div class="bot-icon">🛒</div>
-                <h3>Shop Order Bot</h3>
-                <p>Manage orders for your local shop or store</p>
-                <ul class="features">
-                    <li>Product catalog</li>
-                    <li>Cart & checkout</li>
-                    <li>Order management</li>
-                    <li>Delivery tracking</li>
+                <div class="emoji">📊</div>
+                <span class="badge">High Demand</span>
+                <h3>Lead Generation Bot</h3>
+                <p>Auto scrape, score & export leads from multiple sources</p>
+                <ul>
+                    <li>Google/Maps scraping</li>
+                    <li>JustDial/IndiaMART leads</li>
+                    <li>Lead scoring (0-100)</li>
+                    <li>CSV export</li>
+                    <li>Batch processing</li>
                 </ul>
-                <div class="price">₹799<span>/month</span></div>
+                <div class="price">₹2,499</div>
                 <button class="cta-btn" onclick="window.open('https://t.me/aiagents_support_bot')">Get Started</button>
             </div>
 
             <div class="bot-card">
-                <div class="bot-icon">🍽️</div>
-                <h3>Restaurant Bot</h3>
-                <p>Accept food orders via Telegram</p>
-                <ul class="features">
-                    <li>Menu browsing</li>
-                    <li>Delivery & pickup</li>
-                    <li>Order status updates</li>
-                    <li>Real-time notifications</li>
+                <div class="emoji">✍️</div>
+                <span class="badge">Content King</span>
+                <h3>Content Writer Bot</h3>
+                <p>Generate blogs, social posts, hashtags & SEO content</p>
+                <ul>
+                    <li>Blog article generation</li>
+                    <li>Social media posts</li>
+                    <li>Hashtag suggestions</li>
+                    <li>SEO meta descriptions</li>
+                    <li>Email templates</li>
                 </ul>
-                <div class="price">₹999<span>/month</span></div>
+                <div class="price">₹999</div>
+                <button class="cta-btn" onclick="window.open('https://t.me/aiagents_support_bot')">Get Started</button>
+            </div>
+
+            <div class="bot-card">
+                <div class="emoji">📢</div>
+                <span class="badge">Marketing</span>
+                <h3>WhatsApp Marketing Bot</h3>
+                <p>Broadcast, templates, auto-followup & campaign manager</p>
+                <ul>
+                    <li>12 message templates</li>
+                    <li>Contact database</li>
+                    <li>Bulk broadcast</li>
+                    <li>Auto follow-up</li>
+                    <li>Campaign analytics</li>
+                </ul>
+                <div class="price">₹1,499</div>
+                <button class="cta-btn" onclick="window.open('https://t.me/aiagents_support_bot')">Get Started</button>
+            </div>
+
+            <div class="bot-card">
+                <div class="emoji">🎯</div>
+                <span class="badge">Social</span>
+                <h3>Social Media Bot</h3>
+                <p>Content calendar, hashtags, scheduling & analytics</p>
+                <ul>
+                    <li>Content calendar</li>
+                    <li>21 hashtag categories</li>
+                    <li>7 content types</li>
+                    <li>Multi-platform</li>
+                    <li>Analytics dashboard</li>
+                </ul>
+                <div class="price">₹1,299</div>
+                <button class="cta-btn" onclick="window.open('https://t.me/aiagents_support_bot')">Get Started</button>
+            </div>
+
+            <div class="bot-card">
+                <div class="emoji">🛒</div>
+                <span class="badge">Deals</span>
+                <h3>Deals & Offers Bot</h3>
+                <p>Real-time Amazon scraping, affiliate links & auto-posting</p>
+                <ul>
+                    <li>Real Amazon scraping</li>
+                    <li>8 product categories</li>
+                    <li>Affiliate links</li>
+                    <li>Auto-rotation</li>
+                    <li>Image + text posts</li>
+                </ul>
+                <div class="price">₹799</div>
                 <button class="cta-btn" onclick="window.open('https://t.me/aiagents_support_bot')">Get Started</button>
             </div>
         </div>
     </section>
 
-    <section class="testimonials">
-        <div class="container">
-            <h2 class="section-title">Why Choose Us?</h2>
-            <div class="testimonial-grid">
-                <div class="testimonial">
-                    <p>"Setup was instant! Our customers love booking through Telegram. Saved us hours of phone calls."</p>
-                    <div class="testimonial-author">- Salon Owner, Mumbai</div>
-                </div>
-                <div class="testimonial">
-                    <p>"Orders increased 40% after we started using the bot. Customers find it so easy to order!"</p>
-                    <div class="testimonial-author">- Shop Owner, Delhi</div>
-                </div>
-                <div class="testimonial">
-                    <p>"Best investment for our restaurant. No more missed orders, everything automated!"</div>
-                    <div class="testimonial-author">- Restaurant Owner, Bangalore</div>
-                </div>
+    <section class="why">
+        <h2>Why Choose AI Agents Hub?</h2>
+        <div class="why-grid">
+            <div class="why-card">
+                <div class="emoji">⚡</div>
+                <h3>Instant Setup</h3>
+                <p>Get your bot running in 5 minutes. No coding required.</p>
+            </div>
+            <div class="why-card">
+                <div class="emoji">💰</div>
+                <h3>Zero Investment</h3>
+                <p>One-time payment. No monthly charges. Free hosting included.</p>
+            </div>
+            <div class="why-card">
+                <div class="emoji">🛡️</div>
+                <h3>24/7 Support</h3>
+                <p>Dedicated support via Telegram. We're always here to help.</p>
             </div>
         </div>
     </section>
 
     <section class="cta-section">
         <h2>Ready to Automate Your Business?</h2>
-        <p>Get started in 5 minutes. No technical skills needed.</p>
-        <button class="btn" onclick="window.open('https://t.me/aiagents_support_bot')">Contact Us Now</button>
+        <p>Join 50+ businesses already using AI Agents</p>
+        <a href="https://t.me/aiagents_support_bot" class="btn">Contact Us Now</a>
     </section>
 
     <footer>
-        <p>© 2026 Telegram Bots for Business. All rights reserved.</p>
+        <p>© 2026 AI Agents Hub. All rights reserved.</p>
+        <p style="margin-top: 10px;">Contact: <a href="https://t.me/aiagents_support_bot">@aiagents_support_bot</a></p>
     </footer>
 </body>
 </html>
-
-<!-- updated -->
