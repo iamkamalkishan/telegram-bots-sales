@@ -12,8 +12,8 @@
         .hero p { font-size: 1.2em; margin-bottom: 30px; opacity: 0.9; }
         .cta-btn { background: white; color: #667eea; padding: 15px 40px; border: none; border-radius: 30px; font-size: 1.1em; cursor: pointer; transition: transform 0.3s; }
         .cta-btn:hover { transform: scale(1.05); }
-        .bots { padding: 80px 20px; max-width: 1200px; margin: 0 auto; }
-        .bots h2 { text-align: center; font-size: 2em; margin-bottom: 50px; color: #333; }
+        .section { padding: 80px 20px; max-width: 1200px; margin: 0 auto; }
+        .section h2 { text-align: center; font-size: 2em; margin-bottom: 50px; color: #333; }
         .bot-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; }
         .bot-card { background: white; border-radius: 15px; padding: 30px; box-shadow: 0 5px 20px rgba(0,0,0,0.1); transition: transform 0.3s; }
         .bot-card:hover { transform: translateY(-5px); }
@@ -24,7 +24,10 @@
         .bot-card li { padding: 5px 0; color: #555; }
         .bot-card li:before { content: "✅ "; }
         .price { font-size: 1.5em; font-weight: bold; color: #667eea; margin-bottom: 15px; }
-        .cta-btn { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 12px 30px; border: none; border-radius: 25px; cursor: pointer; font-size: 1em; }
+        .btn { display: inline-block; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 12px 30px; border: none; border-radius: 25px; cursor: pointer; font-size: 1em; text-decoration: none; }
+        .badge { display: inline-block; background: #28a745; color: white; padding: 3px 10px; border-radius: 15px; font-size: 0.8em; margin-bottom: 10px; }
+        .badge.blue { background: #007bff; }
+        .badge.purple { background: #6f42c1; }
         .why { background: #f8f9fa; padding: 80px 20px; }
         .why h2 { text-align: center; font-size: 2em; margin-bottom: 50px; }
         .why-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; max-width: 1000px; margin: 0 auto; }
@@ -34,22 +37,22 @@
         .cta-section { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 80px 20px; text-align: center; }
         .cta-section h2 { font-size: 2em; margin-bottom: 20px; }
         .cta-section p { margin-bottom: 30px; opacity: 0.9; }
-        .btn { display: inline-block; background: white; color: #667eea; padding: 15px 40px; border-radius: 30px; text-decoration: none; font-size: 1.1em; font-weight: bold; transition: transform 0.3s; }
-        .btn:hover { transform: scale(1.05); }
+        .cta-section .btn { background: white; color: #667eea; padding: 15px 40px; border-radius: 30px; font-size: 1.1em; font-weight: bold; }
         footer { background: #333; color: white; text-align: center; padding: 30px 20px; }
         footer a { color: #667eea; text-decoration: none; }
-        .badge { display: inline-block; background: #28a745; color: white; padding: 3px 10px; border-radius: 15px; font-size: 0.8em; margin-bottom: 10px; }
+        .divider { border: none; border-top: 3px solid #667eea; margin: 0 auto; width: 100px; }
     </style>
 </head>
 <body>
     <section class="hero">
-        <h1>🤖 AI Agents for Your Business</h1>
-        <p>6 powerful AI bots to automate sales, support, marketing & more</p>
+        <h1>🤖 Telegram Bots for Your Business</h1>
+        <p>AI-powered bots to automate bookings, orders, sales & customer service</p>
         <button class="cta-btn" onclick="document.getElementById('bots').scrollIntoView()">Explore Bots</button>
     </section>
 
-    <section class="bots" id="bots">
-        <h2>Choose Your AI Agent</h2>
+    <!-- AI AGENTS SECTION -->
+    <section class="section" id="bots">
+        <h2>🤖 AI Agents</h2>
         <div class="bot-grid">
             <div class="bot-card">
                 <div class="emoji">💬</div>
@@ -64,12 +67,12 @@
                     <li>EN/HI support</li>
                 </ul>
                 <div class="price">₹1,999</div>
-                <button class="cta-btn" onclick="window.open('https://t.me/aiagents_support_bot')">Get Started</button>
+                <button class="btn" onclick="window.open('https://t.me/aiagents_support_bot')">Get Started</button>
             </div>
 
             <div class="bot-card">
                 <div class="emoji">📊</div>
-                <span class="badge">High Demand</span>
+                <span class="badge blue">High Demand</span>
                 <h3>Lead Generation Bot</h3>
                 <p>Auto scrape, score & export leads from multiple sources</p>
                 <ul>
@@ -80,12 +83,12 @@
                     <li>Batch processing</li>
                 </ul>
                 <div class="price">₹2,499</div>
-                <button class="cta-btn" onclick="window.open('https://t.me/aiagents_support_bot')">Get Started</button>
+                <button class="btn" onclick="window.open('https://t.me/aiagents_support_bot')">Get Started</button>
             </div>
 
             <div class="bot-card">
                 <div class="emoji">✍️</div>
-                <span class="badge">Content King</span>
+                <span class="badge purple">Content King</span>
                 <h3>Content Writer Bot</h3>
                 <p>Generate blogs, social posts, hashtags & SEO content</p>
                 <ul>
@@ -96,7 +99,7 @@
                     <li>Email templates</li>
                 </ul>
                 <div class="price">₹999</div>
-                <button class="cta-btn" onclick="window.open('https://t.me/aiagents_support_bot')">Get Started</button>
+                <button class="btn" onclick="window.open('https://t.me/aiagents_support_bot')">Get Started</button>
             </div>
 
             <div class="bot-card">
@@ -112,12 +115,12 @@
                     <li>Campaign analytics</li>
                 </ul>
                 <div class="price">₹1,499</div>
-                <button class="cta-btn" onclick="window.open('https://t.me/aiagents_support_bot')">Get Started</button>
+                <button class="btn" onclick="window.open('https://t.me/aiagents_support_bot')">Get Started</button>
             </div>
 
             <div class="bot-card">
                 <div class="emoji">🎯</div>
-                <span class="badge">Social</span>
+                <span class="badge blue">Social</span>
                 <h3>Social Media Bot</h3>
                 <p>Content calendar, hashtags, scheduling & analytics</p>
                 <ul>
@@ -128,12 +131,12 @@
                     <li>Analytics dashboard</li>
                 </ul>
                 <div class="price">₹1,299</div>
-                <button class="cta-btn" onclick="window.open('https://t.me/aiagents_support_bot')">Get Started</button>
+                <button class="btn" onclick="window.open('https://t.me/aiagents_support_bot')">Get Started</button>
             </div>
 
             <div class="bot-card">
                 <div class="emoji">🛒</div>
-                <span class="badge">Deals</span>
+                <span class="badge purple">Deals</span>
                 <h3>Deals & Offers Bot</h3>
                 <p>Real-time Amazon scraping, affiliate links & auto-posting</p>
                 <ul>
@@ -144,13 +147,66 @@
                     <li>Image + text posts</li>
                 </ul>
                 <div class="price">₹799</div>
-                <button class="cta-btn" onclick="window.open('https://t.me/aiagents_support_bot')">Get Started</button>
+                <button class="btn" onclick="window.open('https://t.me/aiagents_support_bot')">Get Started</button>
+            </div>
+        </div>
+    </section>
+
+    <hr class="divider">
+
+    <!-- BUSINESS BOTS SECTION -->
+    <section class="section">
+        <h2>💼 Business Bots</h2>
+        <div class="bot-grid">
+            <div class="bot-card">
+                <div class="emoji">💇‍♂️</div>
+                <span class="badge">Salon</span>
+                <h3>Salon Booking Bot</h3>
+                <p>Automate appointment bookings for your salon or spa</p>
+                <ul>
+                    <li>Customer self-service booking</li>
+                    <li>Service & price management</li>
+                    <li>Automatic reminders</li>
+                    <li>Owner dashboard</li>
+                </ul>
+                <div class="price">₹999</div>
+                <button class="btn" onclick="window.open('https://t.me/aiagents_support_bot')">Get Started</button>
+            </div>
+
+            <div class="bot-card">
+                <div class="emoji">🛒</div>
+                <span class="badge blue">Shop</span>
+                <h3>Shop Order Bot</h3>
+                <p>Manage orders for your local shop or store</p>
+                <ul>
+                    <li>Product catalog</li>
+                    <li>Cart & checkout</li>
+                    <li>Order management</li>
+                    <li>Delivery tracking</li>
+                </ul>
+                <div class="price">₹799</div>
+                <button class="btn" onclick="window.open('https://t.me/aiagents_support_bot')">Get Started</button>
+            </div>
+
+            <div class="bot-card">
+                <div class="emoji">🍽️</div>
+                <span class="badge purple">Restaurant</span>
+                <h3>Restaurant Bot</h3>
+                <p>Accept food orders via Telegram</p>
+                <ul>
+                    <li>Menu browsing</li>
+                    <li>Delivery & pickup</li>
+                    <li>Order status updates</li>
+                    <li>Real-time notifications</li>
+                </ul>
+                <div class="price">₹999</div>
+                <button class="btn" onclick="window.open('https://t.me/aiagents_support_bot')">Get Started</button>
             </div>
         </div>
     </section>
 
     <section class="why">
-        <h2>Why Choose AI Agents Hub?</h2>
+        <h2>Why Choose Us?</h2>
         <div class="why-grid">
             <div class="why-card">
                 <div class="emoji">⚡</div>
@@ -159,20 +215,20 @@
             </div>
             <div class="why-card">
                 <div class="emoji">💰</div>
-                <h3>Zero Investment</h3>
-                <p>One-time payment. No monthly charges. Free hosting included.</p>
+                <h3>One-Time Payment</h3>
+                <p>No monthly charges. Pay once, use forever.</p>
             </div>
             <div class="why-card">
                 <div class="emoji">🛡️</div>
                 <h3>24/7 Support</h3>
-                <p>Dedicated support via Telegram. We're always here to help.</p>
+                <p>Dedicated support via Telegram. Always here to help.</p>
             </div>
         </div>
     </section>
 
     <section class="cta-section">
         <h2>Ready to Automate Your Business?</h2>
-        <p>Join 50+ businesses already using AI Agents</p>
+        <p>Join 50+ businesses already using our bots</p>
         <a href="https://t.me/aiagents_support_bot" class="btn">Contact Us Now</a>
     </section>
 
